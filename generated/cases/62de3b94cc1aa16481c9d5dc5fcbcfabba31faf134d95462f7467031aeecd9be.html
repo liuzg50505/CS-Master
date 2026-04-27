@@ -1,0 +1,410 @@
+<!-- DETAIL_TEMPLATE_VERSION:2 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MLP_notes_week09.pdf | 留学生CS辅导案例详情</title>
+<meta name="description" content="Machine Learning in Python Week 9: Neural Networks I Dr. Sara Wade sara.wade@ed.ac.uk"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/62de3b94cc1aa16481c9d5dc5fcbcfabba31faf134d95462f7467031aeecd9be.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="MLP_notes_week09.pdf | 留学生CS辅导案例详情"/>
+<meta property="og:description" content="Machine Learning in Python Week 9: Neural Networks I Dr. Sara Wade sara.wade@ed.ac.uk"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/62de3b94cc1aa16481c9d5dc5fcbcfabba31faf134d95462f7467031aeecd9be.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="MLP_notes_week09.pdf | 留学生CS辅导案例详情"/>
+<meta name="twitter:description" content="Machine Learning in Python Week 9: Neural Networks I Dr. Sara Wade sara.wade@ed.ac.uk"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/62de3b94cc1aa16481c9d5dc5fcbcfabba31faf134d95462f7467031aeecd9be.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/62de3b94cc1aa16481c9d5dc5fcbcfabba31faf134d95462f7467031aeecd9be.html",
+      "name": "MLP_notes_week09.pdf | 留学生CS辅导案例详情",
+      "description": "Machine Learning in Python Week 9: Neural Networks I Dr. Sara Wade sara.wade@ed.ac.uk",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">MLP_notes_week09.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下面展示该 PDF 提取出的部分内容摘要，便于快速浏览文本要点。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Machine Learning in Python Week 9: Neural Networks I Dr. Sara Wade sara.wade@ed.ac.uk</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">MLP_notes_week09.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Machine Learning in Python
+Week 9: Neural Networks I
+Dr. Sara Wade
+sara.wade@ed.ac.uk
+Contents
+1 Introduction 2
+1.1 Brief History . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+1.2 Logistic regression revisited . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+1.2.1 A simple model for a neuron . . . . . . . . . . . . . . . . . . . . . 3
+1.2.2 Training . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+1.2.3 Basis function expansion revisited . . . . . . . . . . . . . . . . . . 5
+2 Multilayer perceptrons (MLP) 6
+2.1 The XOR problem . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+2.2 Neural network structure . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+2.3 Activation functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11
+2.4 Likelihood functions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 12
+2.5 The importance of depth . . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+2.6 When to use deep learning . . . . . . . . . . . . . . . . . . . . . . . . . . . 18
+3 Implementation inkeras20
+1
+1 Introduction
+There is tremendous hype around neural networks, as the cornerstone of deep learning.
+The purpose of these notes is to introduce one of the simplest architectures (feed-forward,
+fully connected networks) in a piece-by-piece procedure that should hopefully make them
+slightly less mysterious than they appear in different places.
+There are many excellent textbooks and online resources for learning about neural
+networks (for further resources see the references at the end of the notes).
+1.1 Brief History
+The history of neural networks, dates back to the 1940s; see Figure 1 for a rough timeline
+along with milestones in the developments of deep learning. The original motivation for
+feed-forward neural networks(also known asartificial neural networks) arose
+from analogies in how real biological brains work. Neurons (nerve cells) transmit in-
+formation in the brain through detailed and complex wirings that connect individual
+neurons to other neurons, cells, or glands. A first approximation (known as theMcCul-
+loch &amp; Pittsmodel) assumes that each neuron fires depending on a combination of the
+activity of its inputs and strength of its incoming connections. As we will see, this is
+related to the form and assumptions underlying feed-forward neural networks. However,
+the feed-forward neural networks used in practice today differ from biological brains in
+many ways.
+Neural networks rose to fame in 1980s. However, it was not until the 2010s that they
+started to become very widely used, resurfacing with the name of deep learning, including
+Figure 1: A rough history of neural networks and deep learning from Lones (2024). For
+a more detailed history, see Schmidhuber (2014).
+2
+different model architectures, and big accomplishments in specific fields such as image
+classification and text modeling. One of the first areas of breakthrough was the field
+of automatic speech recognition (Dahl et al (2011)). However, the most attention came
+when it was shown the deep convolutional neural networks could significantly improve
+performance on challenging image classification benchmarks (Krizhevsky et al (2012)).
+The “explosion” in the use of deep learning has several contributing factors, including
+i) advances in computation and hardware and ii) the growing volume of large labelled
+datasets. More recently, the storm of Large Language Models has furthered added to
+the success, relying on specific model structures, calledtransformers(Vaswani et al
+(2017)).
+1.2 Logistic regression revisited
+1.2.1 A simple model for a neuron
+We are first going to consider logistic regression again, but we will describe the problem
+in a slightly different way here, as modelling whether a single neuron fires. Let’s think
+of the set of features,x∈R D, as representing the activity of the inputs that connect
+to the neuron and the binary outcome,y∈ {0,1}, as representing whether the neuron
+fires. We can describe predictions in logistic regression as a two-step process. First, we
+form a linear combination of the inputs
+a(x) =b+w Tx,
+wherewis a vector of weights andbis a bias 1. Here, we can think ofwas the ‘wires’
+connecting the inputs to the neuron, wherew Txrepresents a sum of the activity of the
+inputs weighted by the strength of connection. This weighted sum,w Tx, is compared
+to a threshold,−b. At second step, we pass this linear combination to anactivation
+function(namely, a sigmoid (logistic) function),
+f(x) =σ(a(x)) = 1
+1 +e −a(x) ,
+which yields the predictionf(x)∈(0,1).
+Note thatσ(a)→0 asa→ −∞andσ(a)→1 asa→ ∞, and the function varies
+sharply at the origin. Aperceptron, can be seen to be a limiting case of logistic
+regression, which replaces the sigmoid function by theheaviside step functionh(a) =
+1To ease notation later on, we use a different letterbto denote the bias, as opposed tow 0 used in
+previous weeks
+3
+I(a &gt;0), resulting in the deterministic binary classifier of the form:
+f(x) =I(b+w Tx&gt;0).
+If the weighted sum exceeds that threshold,f(x) = 1, while if it is less,f(x) = 0. We
+call it anactivation functionbecause the neuron ‘fires’ if the linear combination of
+incoming activity is large enough, but does not otherwise. This description is reminiscent
+of a very simple model for a biological neuron and is the origin of the ‘neural’ terminology.
+We can think of the pathway to the model predictionf(x) as a two layer process:
+input layerx→output layerf,
+with the pathway from input to output layer featuring (i) a linear combination of inputs
+and (ii) a nonlinear activation. This will be our basic building block in the more complex
+networks below.
+1.2.2 Training
+In the simple logistic regression model, we haveD+ 1 weights to determine. Recall that
+we can interpret the model outputf(x)∈(0,1) in a probabilistic manner asf(x) =
+P(y= 1|x,w). This amounts to modelling the labelyas a Bernoulli random variable
+with probability mass function
+P(y= 1|x,w) =f(x) y(1−f(x)) 1−y =
+
+
+
+f(x) ify= 1
+1−f(x) ify= 0.
+We train our model by maximizing the likelihood, or equivalently minimising the
+negative log likelihood. Given a training set,D={(x n, yn)}N
+n=1, the likelihood is
+p(y|X,w) =
+NY
+n=1
+P(yn|xn,w).
+Taking (minus) the log of this, we obtain the binary cross-entropy:
+L(w) =−
+NX
+n=1
+(yn logf(x n) + (1−y n) log(1−f(x n))).
+4
+Once we have determined the weights via
+ˆw= argmin
+w
+L(w),
+(via gradient descent, discussed next week), we then classify new datapoints as ˆy n = 1
+iff(x n)&gt;0.5, or as ˆy n = 0 iff(x n)&lt;0.5.
+1.2.3 Basis function expansion revisited
+Logistic regression defines a linear decision boundary:
+P(y= 1|x) = 1
+2 ⇔b+w Tx= 0.
+A simple way of increasing the flexibility of such models is to perform a feature trans-
+formation, by replacingxwithϕ(x) through basis function expansion:
+a(x) =b+w T ϕ(x),
+f(x) =σ(a(x)).
+We have discussed various examples, starting from polynomial expansion, which trans-
+form a one-dimensional inputxto the polynomial featuresϕ(x) = (x, x 2, . . . , xM)T ,
+to various others, including kernel functions, which transformxto the kernel features
+ϕ(x) = (k(x,µ 1), . . . , k(x,µM))T .
+Training is easy, as the same algorithm can be employed to estimate the model
+parameters. However, having to specify the basis function expansions is limiting. A
+natural extension is to endow the feature extractor with its own parameters,θ 1:
+a(x) =b+w T ϕ(x;θ 1),
+where the model parameters now consist ofθ= (θ 1,θ 2), andθ 2 = (b,w). We can
+express this through a composition of functions:
+f(x;θ) =f 2(f1(x;θ 1);θ 2),
+where
+f1(x;θ 1) =ϕ(x;θ 1) andf 2(x;θ 2) =σ(b+w Tx).
+5
+We can obviously repeat this process recursively, to create more and more complex
+functions. If we composeLfunctions, we get
+f(x;θ) =f L(fL−1(· · ·(f 1(x))· · ·)),
+wheref l(x) =f l(x;θ l) is the function at layerl= 1, . . . L. This is the key idea behind
+deep neural networks.
+2 Multilayer perceptrons (MLP)
+We can build on our simple neuron model of logistic regression, and chain many of the
+base ‘neurons’ together to build models of arbitrary complexity. Let’s start with a simple
+example which perceptrons (or logistic regression) cannot solve.
+2.1 The XOR problem
+TheXOR problemis one of the most famous examples from the bookPerceptrons,
+Minsky &amp; Papert (1969). The goal is to learn a function that computes theexclusive
+Figure 2: An illustration of the XOR data, which is not linearly separable.
+6
+ORof its two binary inputs, that is, the true function is:
+f(x 1, x2) =
+
+
+
+0 ifx 1 = 0 andx 2 = 0
+1 ifx 1 = 1 andx 2 = 0
+1 ifx 1 = 0 andx 2 = 1
+0 ifx 1 = 1 andx 2 = 1
+.
+From the visualization of this function in Figure 2, it is clear that the data is not
+linearly separable, so a perception (or logistic regression) cannot represent this function.
+However, we can overcome this by stacking multiple perceptrons on top of each other.
+This is a calledmultilayer perceptron (MLP), and also known as afeed-forward
+neural network. Specifically, to solve the XOR problem, we can build a perceptron
+with two hidden units (see Figure 3). The nodes markedx 1 andx 2 are the inputs, the
+node markedyis the output, and the two nodes markedz 1 andz 2 are calledhidden
+units, since their values are not observed in the training data.
+y
+z1 z2
+x1 x2
+Figure 3: A graphical representation of a neural net with one hidden layer for the XOR
+problem. The weights can be manually constructed to implement the XOR function.
+The hidden units are defined through perceptrons with manually constructed weights,
+implementing theANDandORfunctions, respectively:
+z1 =I(x 1 +x 2 −1.5&gt;0),
+z2 =I(x 1 +x 2 −0.5&gt;0).
+Thus, for the first hidden unit, the weights and bias arew 1,1 = (1,1) T andb 1,1 =−1.5,
+and for the second hidden unit, the weights and bias arew 1,2 = (1,1) T andb 1,2 =−0.5.
+7
+And, the hidden units are equivalently defined as:
+z1 =I(w T
+1,1x+b 1,1 &gt;0),
+z2 =I(w T
+1,2x+b 1,2 &gt;0).
+Finally, the output is defined through the perception with manually constructed weights:
+y=I(−z 1 +z 2 −0.5&gt;0)
+=I(w T
+2,1z+b 2,1 &gt;0),
+withw 2,1 = (−1,1) T ,b 2,1 =−0.5, andz= (z 1, z2)T . The weight of−1 multiplyingz 1
+represents theNOToperation and negates theANDoperation.
+This can be generalized to show that an MLP can represent any logical function.
+However, we obviously want to avoid having to specify the weights and biases by hand.
+Instead, we will discuss ways to learn these parameters from data.
+2.2 Neural network structure
+The general structure of our MLP, also known as afeed-forward neural network, is:</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

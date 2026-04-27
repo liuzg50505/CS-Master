@@ -1,0 +1,410 @@
+<!-- DETAIL_TEMPLATE_VERSION:2 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lecture 19 - Fluid Simulation.pdf | 留学生CS辅导案例详情</title>
+<meta name="description" content="Lecture IXX: Fluid Simulation Fluid Motion • Describes object with no fixed topology • Air flow"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/afe14a9c4269ce572e3502837b74cfb74250d877e63594c9daa90fd4c55d6f97.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="Lecture 19 - Fluid Simulation.pdf | 留学生CS辅导案例详情"/>
+<meta property="og:description" content="Lecture IXX: Fluid Simulation Fluid Motion • Describes object with no fixed topology • Air flow"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/afe14a9c4269ce572e3502837b74cfb74250d877e63594c9daa90fd4c55d6f97.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Lecture 19 - Fluid Simulation.pdf | 留学生CS辅导案例详情"/>
+<meta name="twitter:description" content="Lecture IXX: Fluid Simulation Fluid Motion • Describes object with no fixed topology • Air flow"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/afe14a9c4269ce572e3502837b74cfb74250d877e63594c9daa90fd4c55d6f97.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/afe14a9c4269ce572e3502837b74cfb74250d877e63594c9daa90fd4c55d6f97.html",
+      "name": "Lecture 19 - Fluid Simulation.pdf | 留学生CS辅导案例详情",
+      "description": "Lecture IXX: Fluid Simulation Fluid Motion • Describes object with no fixed topology • Air flow",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">Lecture 19 - Fluid Simulation.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下面展示该 PDF 提取出的部分内容摘要，便于快速浏览文本要点。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Lecture IXX: Fluid Simulation Fluid Motion • Describes object with no fixed topology • Air flow</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">Lecture 19 - Fluid Simulation.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Lecture IXX: Fluid Simulation
+Fluid Motion
+• Describes object with no fixed topology
+• Air flow
+• Viscuous fluids
+• Smoke, etc.
+• Key descriptor: flow velocity
+𝑢 = 𝑢(𝑥, 𝑡)
+• Describing the velocity of a “fluid parcel” passing at
+position 𝑥 in time 𝑡
+• Eulerian description
+• How come?
+2
+http://cfd.solvcon.net/old/research/cylinder2.gif
+Flow Velocity
+• Vector field describing motion
+• Steady field:
+𝜕𝑢
+𝜕𝑡 = 0
+• Incompressible: 𝛻 ∙ 𝑢 = 0
+• Irrotational (no vortices): 𝛻 × 𝑢 = 0
+3
+Turbulent with a vortex
+Incompressible,
+irrotational flow
+Steady field
+Incompressibility Assumption
+• No fluid is incompressible
+• Otherwise, no soundwaves!
+• Fluid is a non-solid “rigid body”.
+• Explicit condition:
+ඵ
+𝜕Ω
+𝑢 ∙ ො𝑛 = 0
+• For every (sub) domain Ω with boundary 𝜕Ω
+• “volume in = volume out”
+4
+Incompressibility
+• The divergence theorem:
+ඵ
+𝜕Ω
+𝑢 ∙ ො𝑛 = ම
+Ω
+𝛻 ∙ 𝑢 = 0
+• Since Ω is arbitrary, we have:
+𝛻 ∙ 𝑢 = 0
+everywhere as our condition for incompressibility!
+5
+(Incompressible) Navier-Stokes Equations
+• Representing the conservation of mass and momentum
+for an incompressible fluid (𝛻 ∙ 𝑢 = 0):
+𝜌𝐷𝑢
+𝐷𝑡 = 𝜌 𝑢𝑡 + 𝑢 ∙ 𝛻𝑢 = 𝜈𝛻 ∙  𝛻𝑢 − 𝛻𝑝 + 𝑓
+• 𝑝: pressure field
+• 𝜈: kinematic viscosity.
+• 𝑓: body force per density (usually just gravity ρ𝑔)
+6
+Material Derivative Divergence of stress
+Unsteady
+acceleration
+Convective
+acceleration
+Pressure
+gradientViscosity External
+body forces
+Material Derivative
+• A particle with mass 𝑚 has velocity 𝑢
+• Newton’s 2nd  law:
+𝑚𝐷𝑢
+𝐷𝑡 = Ԧ𝐹
+• What are the forces acting on the particle?
+• Simplest component: gravity Ԧ𝐹𝑔 = m Ԧ𝑔
+7
+Pressure
+• The particle receives pressure from all directions in a
+fluid
+• What causes pressure? Incompressibility!
+• Pressure balances flow that creates compression
+• Algebraically:
+•  𝛻 ∙ 𝑢 = 0 is a constraint
+• Pressure is the Lagrange multiplier 𝜆!
+• Suppose particle volume 𝑉
+• Integrated (scalar!) pressures over particle : 𝑝
+• Net force enacted by pressure: Ԧ𝐹𝑝𝑟𝑒 = −𝑉𝛻𝑝
+8
+Viscosity
+• Resistance to deformation by shear stress
+• Expressed by coefficient 𝜈:
+𝐹
+𝐴 = 𝜈 𝜕𝑢
+𝜕𝑦
+• Higher 𝜈: more pressure required for shearing!
+• Viscid fluids
+9
+Viscosity
+• Another interpretation: how much the flow of a
+particle different from the flow of its neighbors
+• Laplacian:  𝜈𝛻 ∙  𝛻𝑢 = 𝜈Δ𝑢
+• 𝜈: dynamic viscosity
+• 𝜈 is defined per volume unit, so to get force:
+Ԧ𝐹𝑣𝑖𝑠 = 𝑉 ∙ 𝜈𝛻 ∙  𝛻𝑢
+• What is the Laplacian of a vector?
+• For each coordinate independently
+10
+Putting it All Together
+• The Navier-Stokes equation in particle form:
+𝑚𝐷𝑢
+𝐷𝑡 = Ԧ𝐹𝑣𝑖𝑠 + Ԧ𝐹𝑝𝑟𝑒 + Ԧ𝐹𝑒𝑥𝑡 = 𝑉𝜈𝛻 ∙  𝛻𝑢 − 𝑉𝛻𝑝 + 𝑚 Ԧ𝑔
+• In the limit (infinitesimal particles):
+𝑚
+𝑉 → 𝜌
+• dividing by 𝑉 we get:
+𝜌𝐷𝑢
+𝐷𝑡 = 𝜈𝛻 ∙  𝛻𝑢 − 𝛻𝑝 + 𝜌 Ԧ𝑔
+• What is the material derivative
+𝐷𝑢
+𝐷𝑡?
+11
+Material Derivative
+• The connecting thread between Lagrangian and Eulerian
+approaches.
+• Reminder:
+• Lagrangian: tracking elements as they move (particles, mesh
+vertices)
+• Eulerian: tracking movement in a fixed point in space
+(temperature on grid, amount of material in a cell)
+• Lagrangian description:
+• Suppose a set of particles, each with quantity 𝑞
+• The particle is moving with velocity 𝑢 𝑡 =
+𝑑 Ԧ𝑥 𝑡
+𝑑𝑡
+• Eulerian description:
+• 𝑞(𝑡, Ԧ𝑥): the quantity of the particle that passes through fixed
+point  Ԧ𝑥 at time 𝑡.
+• How to tie both narratives?
+12
+Material Derivative
+• This is the total change of quantity 𝑞 in point Ԧ𝑥 for a given
+fluid (material) parcel!
+• The chain rule:
+𝐷𝑞
+𝐷𝑡 = 𝑑
+𝑑𝑡𝑞 𝑡, Ԧ𝑥 𝑡 = 𝜕𝑞
+𝜕𝑡 + 𝛻𝑞 ∙ 𝑑 Ԧ𝑥
+𝑑𝑡 = 𝜕𝑞
+𝜕𝑡 + 𝛻𝑞 ∙ 𝑢
+•
+𝝏𝒒
+𝝏𝒕: How much 𝑞 changes at the fixed point Ԧ𝑥
+• 𝜵𝒒 ∙ 𝒖: how much of the change at Ԧ𝑥 is due to advection
+(transfer of material). Also: convection, transport
+• When 𝑞 doesn’t change for a particle, we get the
+advection equation:
+𝜕𝑞
+𝜕𝑡 + 𝛻𝑞 ∙ 𝑢 = 0
+13
+Material Derivative
+• The change in the velocity of the fluid parcel
+passing at position 𝑥 in time 𝑡.
+𝐷𝑢
+𝐷𝑡 = 𝑢𝑡 + 𝑢 ∙ 𝛻𝑢
+• 𝑢𝑡: unsteady acceleration.
+• How much velocity changes for that material in that
+point
+• 𝑢 ∙ 𝛻𝑢: convective acceleration.
+• How much velocity changes due to movement along
+trajectory
+14
+http://www.continuummechanics.org /images/continuity/ converging_nozzle.png
+Inviscid Flow
+• We often drop viscosity altogether
+• Getting the Euler equations:
+𝑚𝐷𝑢
+𝐷𝑡 = Ԧ𝐹𝑝𝑟𝑒 + Ԧ𝐹𝑒𝑥𝑡 = −𝑉𝛻𝑝 + 𝑚 Ԧ𝑔
+• “numerical dissipation”: errors that mimic physical
+viscosity enough for the visual effect
+• Numerical dissipation often &gt;&gt; true physical viscosity!
+Boundary Conditions
+• Solid walls: no velocity through:
+𝑢 ∙ ො𝑛 = 0
+• What about pressure?
+• For viscid fluid, there is also tangential “stick”
+• “no-slip” conditions: 𝑢 = 0
+16
+https://i.ytimg.com/vi/7tAoJ4RarAw/maxresdefault.jpg
+Example: Fluid Simulation
+17
+https://youtu.be/F5KuP6qEuew
+Coupled Particle System
+• Particles interact with each other depending on
+their spatial relationship
+• These relationships are dynamic, so geometric and
+topological changes can take place
+• Each particle 𝑝𝑖 has a potential energy 𝐸𝑃𝑖
+• The sum of the pairwise potential energies between the
+particle 𝑝𝑖 and the other particles
+𝐸𝑃𝑖 = ෍
+𝑗≠𝑖
+𝐸𝑃𝑖𝑗
+18</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

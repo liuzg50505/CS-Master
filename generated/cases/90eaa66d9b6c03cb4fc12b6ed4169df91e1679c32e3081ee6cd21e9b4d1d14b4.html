@@ -1,0 +1,305 @@
+<!-- DETAIL_TEMPLATE_VERSION:2 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lecture 13 - Soft-Body Physics.pdf | 留学生CS辅导案例详情</title>
+<meta name="description" content="Lecture XIII: Soft-Body Physics Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generaliza…"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/90eaa66d9b6c03cb4fc12b6ed4169df91e1679c32e3081ee6cd21e9b4d1d14b4.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="Lecture 13 - Soft-Body Physics.pdf | 留学生CS辅导案例详情"/>
+<meta property="og:description" content="Lecture XIII: Soft-Body Physics Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generaliza…"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/90eaa66d9b6c03cb4fc12b6ed4169df91e1679c32e3081ee6cd21e9b4d1d14b4.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Lecture 13 - Soft-Body Physics.pdf | 留学生CS辅导案例详情"/>
+<meta name="twitter:description" content="Lecture XIII: Soft-Body Physics Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generaliza…"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/90eaa66d9b6c03cb4fc12b6ed4169df91e1679c32e3081ee6cd21e9b4d1d14b4.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/90eaa66d9b6c03cb4fc12b6ed4169df91e1679c32e3081ee6cd21e9b4d1d14b4.html",
+      "name": "Lecture 13 - Soft-Body Physics.pdf | 留学生CS辅导案例详情",
+      "description": "Lecture XIII: Soft-Body Physics Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generaliza…",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">Lecture 13 - Soft-Body Physics.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下面展示该 PDF 提取出的部分内容摘要，便于快速浏览文本要点。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Lecture XIII: Soft-Body Physics Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generalization: soft (deformable) bodies•Deformed by force: car body, punched or pierced•Prone to stress: piece of cloth, flag, paper sheet•Not solid:…</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">Lecture 13 - Soft-Body Physics.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Lecture XIII: Soft-Body Physics
+Soft Bodies•Realistic objects are not purely rigid•Good approximation for “hard” ones•…approximation breaks when objects break or deform•Generalization: soft (deformable) bodies•Deformed by force: car body, punched or pierced•Prone to stress: piece of cloth, flag, paper sheet•Not solid: snow, mud, lava, liquid
+2
+http://www.games73.com/media.games73.com/files/2012/05/Crysis-3-soft-physics-demo-thumb-610x239.jpg
+http://i.huffpost.com/gen/1480563/images/o-DISNEY-facebook.jpg
+Grinspun et al. “Discrete Shells”
+Elasticity•Forces may cause object deformation•Elasticity: the tendency of a body to return to its original shape after the forces causing the deformation cease•Rubbers are highly elastic•Metal rods are much less
+3
+http://www.ibmbigdatahub.com/sites/default/files/elasticity_blog.jpg
+http://www.mommypotamus.com/wp-content/uploads/2013/01/homemade-play-dough-recipe-with-natural-dye-6-300x300.jpg
+Continuum Mechanics•A deformable object is defined by rest shape and material parameters•Material domain: the rest shape ⃗𝑥•Deformation map: 𝑓(⃗𝑥) of every material point ⃗𝑥•𝑓:ℝ!→ℝ!. 𝑑	: dimension (mostly 𝑑=2,3)•Relative displacement field: 𝑓(⃗𝑥) =⃗𝑥+ 𝑢(⃗𝑥)
+4𝑥
+𝑥+Δ𝑥Δ𝑥
+𝑓(𝑥)𝑢(𝑥)
+𝑢(𝑥+Δ𝑥)𝑓(𝑥+Δ𝑥)
+Δ𝑓
+Δ𝑥𝑥
+Δ𝑓𝑓(𝑥)
+𝑢(𝑥)
+Local Deformation•Taylor series:𝑓⃗𝑥+Δ⃗𝑥≈𝑓⃗𝑥+𝐽!Δ⃗𝑥•1st-order linear approximation•As 𝑓⃗𝑥=⃗𝑥+𝑢⃗𝑥, we get:⃗𝑥+Δ⃗𝑥+𝑢⃗𝑥+Δ⃗𝑥≈⃗𝑥+𝑢⃗𝑥+𝐽!Δ⃗𝑥⟹𝑢⃗𝑥+Δ⃗𝑥≈𝑢⃗𝑥+𝐽!−𝐼&quot;×&quot;Δ⃗𝑥•The Jacobians: 𝐽!=$!$%,𝐽&amp;=$&amp;$%=𝐽!−𝐼&quot;×&quot;6
+Stretch and Compression•How much an object locally stretches or compresses in each direction•New length:Δ𝑓&#x27;=𝑓⃗𝑥+Δ⃗𝑥−𝑓⃗𝑥&#x27;≈𝐽!Δ⃗𝑥&#x27;=Δ⃗𝑥(∗𝐽!(𝐽!∗Δ⃗𝑥•Stretch: relative change in length:Δ𝑓&#x27;Δ𝑥&#x27;≈Δ⃗𝑥(∗𝐽!(𝐽!∗Δ⃗𝑥Δ⃗𝑥(∗Δ⃗𝑥 7
+http://www.yankodesign.com/images/design_news/2011/06/09/elastic_exerciser.jpg
+Cauchy-Green Deformation Tensor•𝐽!(𝐽!&quot;×&quot; is the (right) Cauchy-Green tensor.•Interpretation: for direction 1𝑑, we get:∇&quot;𝑓𝑥&#x27;≈1𝑑(4𝐽!(𝐽!41𝑑•In words: the CG tensor measures the ratio of change in squared length in a direction
+8
+∇⃗&quot;𝑓𝑥*𝑑
+Rigid-Body Deformation•Transformation:𝑓⃗𝑥=𝑅⃗𝑥+𝑇•𝑅: rotation (constant)•𝑇: translation•𝐽!=𝑅, and then 𝐽!(𝐽!=𝐼•No stretch!
+9
+http://www.stressebook.com/wp-content/uploads/2015/03/Rigid-Body-Modes-600x300.png
+The Green-Lagrange Strain Tensor•Measures the deviation from rigidity:𝐄*×*=12𝐽!(𝐽!−𝐼•Gives “0” for rotations•Rather than “1” in the CG tensor
+•In deformation field terms (𝐽!=𝐽&amp;+𝐼&quot;×&quot;):𝐄=12𝐽&amp;(𝐽&amp;+𝐽&amp;+𝐽&amp;(
+10
+Strain•The fractional deformation ⁄𝜖=∆𝐿𝐿•Dimensionless (a ratio)•How much a deformation differs from rigidity in a given direction:•Negative: compression•Zero: rigid•Positive: stretch•In 1D: +!+%=∆-.--=1+𝜖
+11
+𝐹𝑡𝑡+∆𝑡
+𝐿
+𝐿+∆𝐿
+GL Tensor and Strain•For Strain ⁄𝜖=∆𝐿𝐿 in (unit length) direction 1𝑑: 1𝑑(𝐄1𝑑=𝜖+12𝜖&#x27;•Problem: the GL strain tensor is nonlinear in the deformation 𝑓 (or the deformation field 𝑢)•Approximation: the infinitesimal strain tensor:𝛆=12𝐽&amp;(𝐽&amp;+𝐽&amp;+𝐽&amp;(≈12𝐽&amp;+𝐽&amp;(Where 1𝑑(𝛆1𝑑≈𝜖
+12
+𝐄#×#=12𝐽%&amp;𝐽%−𝐼
+The Infinitesimal Strain Tensor•A.K.A. Cauchy’s strain tensor:𝛆=12𝐽&amp;+𝐽&amp;(=12𝐽!+𝐽!(−𝐼
+•So that for unit direction ⃗𝑑:𝜖&quot;=1𝑑(𝛆1𝑑•The Strain tensor is not rotation invariant!•Good for small deformations 𝐽&amp;≪1
+13
+Poisson’s ratio•Strain in one direction usually causes compression in another•Poisson’s ratio: the ratio of transversal to axial strain:𝜈=−𝑑𝑡𝑟𝑎𝑛𝑠𝑣𝑒𝑟𝑠𝑎𝑙	𝑠𝑡𝑟𝑎𝑖𝑛𝑑𝑎𝑥𝑖𝑎𝑙	𝑠𝑡𝑟𝑎𝑖𝑛•Equals 0.5 in perfectly incompressible material•If the force is applied along 𝑥:𝜈=−𝑑𝜖/𝑑𝜖%=−𝑑𝜖0𝑑𝜖% 14
+Poisson’s Ratio•Example of a cube of size 𝐿•Average strain in each direction: 𝜈≈∆-!∆-•Approximate, because only true for small elements and deformation
+15
+𝐹
+Δ𝐿𝐿 ∆𝐿′
+Stress•Magnitude of applied force per area of application•large value ó  force is large, or surface area is small•Pressure measure ⃗𝜎 •Unit: Pascal: 𝑃𝑎=[12&quot;]•Example: gravity stress on plane:  ⃗𝜎=𝑚⃗𝑔/𝜋𝑟&#x27;
+16
+𝑟
+𝑊𝑚
+The Linear Stress Tensor•Measuring stress for each (unit) direction S𝑛 in an infinitesimal volume element:
+𝜎(S𝑛)=𝜎%%𝜎/%𝜎0%𝜎%/𝜎//𝜎0/𝜎%0𝜎/0𝜎00S𝑛=𝝈S𝑛
+•Note that 𝝈S𝑛	is not necessarily parallel to S𝑛!•𝝈S𝑛=𝝈S𝑛,S𝑛S𝑛+𝜏
+17
+normal stressshear stress
+Body Material•The amount of stress to produce a strain is a property of the material•Isotropic materials: same in all directions•Modulus: a ratio of stress to strain•Usually in a linear direction, along a planar region or throughout a volume region•Young’s modulus, Shear modulus, Bulk modulus•Describing the material reaction to stress
+18
+http://openalea.gforge.inria.fr/doc/vplants/mechanics/doc/_build/html/_images/system_geometry7.png
+Young ’s Modulus•Defined as the ratio of linear stress to linear strain:𝑌=𝑙𝑖𝑛𝑒𝑎𝑟	𝑠𝑡𝑟𝑒𝑠𝑠𝑙𝑖𝑛𝑒𝑎𝑟	𝑠𝑡𝑟𝑎𝑖𝑛=𝐹/𝐴∆𝐿/𝐿•Example:
+19
+𝐿+∆𝐿
+𝐹𝐴
+Shear modulus•The ratio of planar stress to planar strain:𝑆=𝑝𝑙𝑎𝑛𝑎𝑟	𝑠𝑡𝑟𝑒𝑠𝑠𝑝𝑙𝑎𝑛𝑎𝑟	𝑠𝑡𝑟𝑎𝑖𝑛=𝐹/𝐴∆𝐿/𝐿•Example:
+20
+𝐿
+𝐴𝐹
+∆𝐿
+Bulk modulus•The ratio of volume stress to volume strain (inverse of compressibility):𝐵=𝑣𝑜𝑙𝑢𝑚𝑒	𝑠𝑡𝑟𝑒𝑠𝑠𝑣𝑜𝑙𝑢𝑚𝑒	𝑠𝑡𝑟𝑎𝑖𝑛=∆𝑃∆𝑉/𝑉•Example
+21
+𝐴
+𝑃=𝐹/𝐴
+𝑉𝐹 𝐴
+𝑃+∆𝑃
+𝑉+∆𝑉𝐹+∆𝐹
+Linear Elasticity•Stress and strain are related by Hooke’s law•Remember 𝐹=−𝑘∆𝑥?•Reshape tensors to vector form:•𝝈=𝜎??,𝜎?@,⋯,𝜎AA, and similarly for strain tensor 𝛆•Then the stiffness tensor 𝐂3×3 holds: 𝝈=𝐂𝛆
+22
+https://people.eecs.berkeley.edu/~sequin/CS184/TOPICS/SpringMass/Spring_mass_2D.GIF
+Brown et al. “Resampling Adaptive Cloth Simulations onto Fixed-Topology Meshes”
+𝜎&#x27;&#x27;𝜎(&#x27;𝜎)&#x27;𝜎&#x27;(𝜎((𝜎)(𝜎&#x27;)𝜎()𝜎))
+Stiffness Tensor•Strain and stress tensors are symmetric•Only 6 dofs
+23
+𝝈=𝜎&#x27;&#x27;𝜎((𝜎))𝜎&#x27;(𝜎()𝜎)&#x27;
+,  𝜺=𝜀&#x27;&#x27;𝜀((𝜀))𝜀&#x27;(𝜀()𝜀𝜎)&#x27;
+,𝝈=𝐂𝟔×𝟔𝜺
+Discrete Stress Tensor•Shape of 𝐂
+𝐂=𝜆+2𝜇𝜆𝜆𝜆𝜆+2𝜇𝜆𝜆𝜆𝜆+2𝜇2𝜇2𝜇2𝜇•Where 𝜇=!&quot;($%&amp;),𝜆=&amp;!($%&amp;)($(&quot;&amp;)•𝑌 – Young ’s modulus•𝜐 – Poisson’s ratio•𝜇 and 𝜆 are known as Lamé coefficients/parameters24
+Hyperelastic Materials•Seek to return to their “rest shape”•Have a potential deformation energy •Spring energy: 𝐸4=5&#x27;𝑘𝑥−𝑥6&#x27;•Underlying assumption: deformation energy is not path-dependent!
+25
+Linear Elasticity Energy•One Possibility is: 𝐸=5&#x27;∫𝝈,𝝐𝑑𝑉•Possibilities depend on the type of Stress\Strain tensors in use•This one is popular for linear elasticity with FEM•We get:𝐸=12c(𝝐(𝐂𝝐𝑑𝑉
+26
+𝐸+=12𝑘𝑥−𝑥,-
+Dynamic Elastic Materials•For every point 𝑞, The PDE is given by𝜌∗𝑑&#x27;𝑢𝑑𝑡&#x27;=𝛻4𝜎+⃗𝐹• 𝜌: the density of the material•𝛻9𝜎=⁄𝜕𝜕𝑥,⁄𝜕𝜕𝑦,⁄𝜕𝜕𝑧∗𝜎 is the divergence of the stress tensor (modeling internal forces)•𝐹: external body forces (per point)•Generalized Newton’s 2nd law!•Remember 𝐹=𝑚𝑎?•Similar, in elasticity language
+27
+http://www.cims.nyu.edu/cmcl/ComplexFluids/Images/OB-Pump.png</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

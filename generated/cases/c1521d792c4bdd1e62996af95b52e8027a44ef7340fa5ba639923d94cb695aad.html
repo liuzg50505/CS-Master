@@ -1,0 +1,410 @@
+<!-- DETAIL_TEMPLATE_VERSION:2 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Session_7B_Libraries_Pandas_Matplotlib.pdf | 留学生CS辅导案例详情</title>
+<meta name="description" content="Python Scientific Libraries Pandas and matplotlib 1 Last session!"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/c1521d792c4bdd1e62996af95b52e8027a44ef7340fa5ba639923d94cb695aad.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="Session_7B_Libraries_Pandas_Matplotlib.pdf | 留学生CS辅导案例详情"/>
+<meta property="og:description" content="Python Scientific Libraries Pandas and matplotlib 1 Last session!"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/c1521d792c4bdd1e62996af95b52e8027a44ef7340fa5ba639923d94cb695aad.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Session_7B_Libraries_Pandas_Matplotlib.pdf | 留学生CS辅导案例详情"/>
+<meta name="twitter:description" content="Python Scientific Libraries Pandas and matplotlib 1 Last session!"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/c1521d792c4bdd1e62996af95b52e8027a44ef7340fa5ba639923d94cb695aad.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/c1521d792c4bdd1e62996af95b52e8027a44ef7340fa5ba639923d94cb695aad.html",
+      "name": "Session_7B_Libraries_Pandas_Matplotlib.pdf | 留学生CS辅导案例详情",
+      "description": "Python Scientific Libraries Pandas and matplotlib 1 Last session!",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">Session_7B_Libraries_Pandas_Matplotlib.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下面展示该 PDF 提取出的部分内容摘要，便于快速浏览文本要点。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Python Scientific Libraries Pandas and matplotlib 1 Last session!</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">Session_7B_Libraries_Pandas_Matplotlib.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Python Scientific Libraries
+Pandas and matplotlib
+1
+Last session!
+- Scientific libraries in Python
+- Numpy
+- Why numpy?
+- ndarray
+- Universal functions
+2
+Pandas
+▪ What is Pandas?
+▪ Basic Data Structures: Series and DataFrames
+▪ Basic Functions
+▪ Descriptive statistic
+3
+Readings
+▪ Python for data science
+– Chapter 5 and 7
+4
+What is pandas?
+▪ One of the most popular library that data scientists use.
+▪ Created by Wes McKinney in 2008, now maintained by Jeff Reback and
+many others.
+– Author of the textbook: Python for Data Analysis
+▪ Panda provides fast, ﬂexible, and expressive data structures: Series and
+dataFrames,  designed to make working with “relational” or “labeled” data
+both easy and intuitive.
+▪ It aims to be the fundamental high -level building block for doing practical,
+real world data analysis in Python.
+▪ Pandas builds on top of Numpy to ease managing heterogeneous data
+sets.
+5
+http://pandas.pydata.org/
+Series
+▪ One dimensional array-like object.
+▪ It contains array of data (of any NumPy
+data type) with associated indexes.
+▪ Indices can be strings or integers or other
+data types.
+▪ Unlike dictionary, index items don&#x27;t have to
+be unique
+Series
+• Subclass of num py. ndar r ay
+• Data: any type
+• Index labels need not be ordered
+• Duplicates are possible (but
+result in reduced functionality)
+5
+6
+12
+-5
+6.7
+A
+B
+C
+D
+E
+valu esin d ex
+6
+DataFrame
+ A DataFrame is a collection of columns (Series); the Series data forms rows.
+ DataFrame object represents a table with column names, rows, and indices
+Age Gender State …
+0
+1
+2
+Index
+Column
+Names
+Column
+All data in a column must
+be the same kind…
+Creating a DataFrame
+▪ Directly from Dict or Series
+▪ From a Comma-Separated File – CSV file
+– pd.read_csv()
+– Can infer headers/column names if present, otherwise may want to reindex
+▪ From an Excel File
+– pd.read_excel()
+▪ From a Database using SQL (see the reading for an example)
+▪ From Clipboard, URL, Google Analytics,  …
+▪ …
+8
+From: Python for Data Analysis; Wes McKinney
+import pandas as pd
+Viewing data
+▪ Slicing
+– Using square brackets for [ ] columns and rows.
+➢ only one dimension can be specified.
+– loc gets rows (or columns) with particular labels from the index.
+– iloc gets rows (or columns) at particular positions in the index (so it only
+takes integers).
+9
+10
+import numpy as np
+import pandas as pd
+df = pd.DataFrame(data=np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]]),
+index= [2, &#x27;A&#x27;, 2], columns=[&#x27;primera&#x27;, 49, &#x27;tercera&#x27;])
+#loc and iloc differences
+ans = df.loc[2] # index named 2
+ansA = df.loc[&#x27;A&#x27;] # index named &#x27;A&#x27;as a Series
+ansA = df.loc[[&#x27;A&#x27;]] # index named &#x27;A&#x27; as DataFrame
+# 2 to iloc
+ans2 = df.iloc[2] #index at position 2 as a Series
+ans2 = df.iloc[[2]] #index at position 2 as a Dataframe
+index primera 49 tercera
+2 1 2 3
+A 4 5 6
+2 7 8 9
+DataFrame – getting rows
+Slicing a Data Frame
+Column name
+11
+&gt;&gt; df_grades.loc[0, “Name”]
+#Or
+&gt;&gt;df_grades[“Name”][0] #careful with order
+Jake
+Index label
+DataFrame – retrieving a column
+▪ A column in a DataFrame can be retrieved as a Series by dict-like
+notation or as attribute
+▪ Series index and name have been kept/set appropriately
+12
+&gt;&gt;frame[&#x27;state&#x27;]
+0 Ohio
+1 Ohio
+2 Ohio
+3 Nevada
+4 Nevada
+Name: state, dtype: object
+&gt;&gt; frame.state
+0 Ohio
+1 Ohio
+2 Ohio
+3 Nevada
+4 Nevada
+Name: state, dtype: object
+DataFrame – modifying columns
+• Columns, rows or individual elements can be modified with assignment.
+• For rows use loc or iloc.
+13
+&gt;&gt;frame2[&#x27;debt&#x27;] = 0
+&gt;&gt;frame2[&#x27;debt&#x27;] = range(5) # has to be of the
+same length
+&gt;&gt;fame2.iloc[0]= [1,2,3]
+Slicing a Data Frame
+Endpoints are inclusive!
+14
+&gt;&gt;df_slice= df_grades.loc[0:2,”Name”:&quot;mini_Exam2”]
+Add/remove
+▪ New Columns can be added (by computation or direct assignment)
+▪ Columns and rows can be dropped
+15
+&gt;&gt;df[‘other’]= 2
+&gt;&gt;df[‘other’]= df[‘salary’]*2
+&gt;&gt;del df[&#x27;debt&#x27;]
+&gt;&gt;df[‘other’]= df[‘salary’]*2
+&gt;&gt;df.drop([&#x27;r1’])
+&gt;&gt;df.drop([&#x27;r1&#x27;,&#x27;r3’])
+&gt;&gt;df.drop([&#x27;c1&#x27;], axis=1)
+Statistics
+Describe method:
+▪ Descriptive statistics include those that summarize the central
+tendency, dispersion and shape of a dataset’s distribution,
+excluding NaN values.
+▪ Analyzes both numeric and object series, as well
+as DataFrame column sets of mixed data types. The output will vary
+depending on what is provided.
+▪ This method gives a good overview of the data, and is typically used
+in the exploratory data analysis phase.
+16
+&gt;&gt;df.describe()
+https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html
+Merge
+▪ The following function call will merge the two DataFrames on their
+common field, and, importantly, will keep the indices aligned.
+▪ What this means is that even though the names are listed in
+different order in the two frames, the merge will still give correct
+result.
+17
+&gt;&gt;pd.merge(df, df2) # By default an inner join is computed
+&gt;&gt;pd.merge(df, df3, how=&quot;outer&quot;) # Outer join
+Handling missing data
+▪ Filtering out missing values
+18
+&gt;&gt;data.dropna()
+&gt;&gt;data.dropna(how=&#x27;all’)
+&gt;&gt;data.dropna(axis=1, how=&#x27;all’)
+&gt;&gt;data.fillna(0)
+&gt;&gt;data.fillna(0, inplace=True)
+&gt;&gt;data.fillna(data.mean(skipna=True)) #replace nan with
+column mean
+Grouping and aggregation
+▪ Pandas has an operation that splits a DataFrame into groups,
+performs some operation on each of the groups, and then combines
+the result from each group into a resulting DataFrame.
+▪ This split-apply-combine functionality is really flexible and powerful
+operation.
+19</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>

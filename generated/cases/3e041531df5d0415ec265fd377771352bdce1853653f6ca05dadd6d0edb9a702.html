@@ -1,0 +1,333 @@
+<!-- DETAIL_TEMPLATE_VERSION:2 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lecture 14 - Soft-Body Simulation.pdf | 留学生CS辅导案例详情</title>
+<meta name="description" content="Lecture XIV: Soft-Body Simulation Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Dis…"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/3e041531df5d0415ec265fd377771352bdce1853653f6ca05dadd6d0edb9a702.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="Lecture 14 - Soft-Body Simulation.pdf | 留学生CS辅导案例详情"/>
+<meta property="og:description" content="Lecture XIV: Soft-Body Simulation Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Dis…"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/3e041531df5d0415ec265fd377771352bdce1853653f6ca05dadd6d0edb9a702.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Lecture 14 - Soft-Body Simulation.pdf | 留学生CS辅导案例详情"/>
+<meta name="twitter:description" content="Lecture XIV: Soft-Body Simulation Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Dis…"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/3e041531df5d0415ec265fd377771352bdce1853653f6ca05dadd6d0edb9a702.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/3e041531df5d0415ec265fd377771352bdce1853653f6ca05dadd6d0edb9a702.html",
+      "name": "Lecture 14 - Soft-Body Simulation.pdf | 留学生CS辅导案例详情",
+      "description": "Lecture XIV: Soft-Body Simulation Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Dis…",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">Lecture 14 - Soft-Body Simulation.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下面展示该 PDF 提取出的部分内容摘要，便于快速浏览文本要点。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Lecture XIV: Soft-Body Simulation Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Discrete representation with limited memory•Efficiencyis key•…and also consistency and stability 2 Partial Differential Equations•Govern the co…</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">Lecture 14 - Soft-Body Simulation.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Lecture XIV: Soft-Body Simulation
+Motivation•Continuous physics: rigid, deforming, attaching, detaching bodies•“continuous” features•“infinite” resolution•Computer simulation:•Discrete representation with limited memory•Efficiencyis key•…and also consistency and stability
+2
+Partial Differential Equations•Govern the connection between kinematics and dynamics•Examples:•⃗𝐹=𝑚⃗𝑎=𝑚!&quot;!#=−⃗𝑣 (drag).•⃗𝐹=−𝑘⃗𝑥=!⃗%!# (spring; Hooke’s law).•We learned how to integrate in time•How to discretize in space?
+3
+Partial Differential Equations•Challenges:•Discretize (partial) derivatives•Obey conservation rules•Consistency•Good sampling•Representation choices:•Where do functions\vectors\tensors “live”?
+4
+[Azencot et al. 2015]
+https://www.youtube.com/watch?v=5mNn7csNGDk
+http://caewatch.com/top-5-misunderstandings-on-good-mesh/
+Numerical Simulation•Lagrangian:•Representation: connected mesh or cloud of particles•Examples: Finite methods, Mass-spring system, particle systems•Eulerian:•Representation: stationary point set or grid, where material properties change over time•Boundary of object not explicitly defined•Suitable for fluids
+5
+http://www.flowillustrator .com/wp-content/uploads/2015/02/MaterialDerivative.png
+Finite Element Method (FEM)•Tessellating the volume into a large finite number of disjoint elements (3D volumetric/surface mesh)•Usually: simplices•Sometimes quads/hexes•Scalar functions: at vertices•Differentials on edges 𝑒!&quot;: 𝑑𝑢=𝑢&quot;−𝑢!•Derivatives?
+6
+https://afinemesh.files.wordpress.com/2015/05/frontal-hex-mesh.png
+Motivation•Discretize deformations, vectors, and tensors•Derivative and integrals =&gt; linear operators (matrices)•Solving PDEs ó solving linear equations•Either directly, or by iterations
+7
+http://fetk.org/codes/mc/images/bar3ndef_wbg.gif
+Irving et al. “Volume Conserving Finite Element Simulations of Deformable Models”https://www.youtube.com/watch?v=Rbq2CdUIvw4
+Lagrange FEM Basis•Function values defined on vertices, but•Assumed to interpolate linearly on elements:•Blending: by area weighting:𝑢𝑝=𝐴&amp;𝑢𝑎+𝐴&#x27;𝑢𝑏+𝐴(𝑢𝑐𝐴&amp;+𝐴&#x27;+𝐴(
+8
+9
+Lagrange FEM Basis•Alternatively: a sum of barycentric functions:𝑢𝑝=0)*&amp;
+(𝐵)(𝑝)𝑢)•𝐵!(𝑝): Barycentric coordinates of p in element
+Lagrange FEM Basis•Equivalent definition: function is defined by per-vertex 𝑢# scalar values•Entire space is spanned by Lagrange basis functions𝑢𝑝=*#∈%𝑢#𝜑#(𝑝)•𝜑#𝑝=1 on 𝑣, and 0 on other vertices•Piecewise linear (“hat function”)
+10
+Lagrange FEM Basis•If scalar functions are piecewise linear on vertices:•Gradients 𝛻𝑢 are piecewise constant on faces!𝛻𝑢𝑝=0&quot;∈,𝑢)𝛻𝜑&quot;(𝑝)
+11
+𝑢𝑝=0!∈#𝑢$𝜑!(𝑝)
+Boundary-Aware Hodge Decompositions for Piecewise Constant Vector Fields [Poelke and Polthier]
+Gradients•We want to compute 𝛻𝜑&amp; (w.l.o.g.) in face 123•Insight: in the direction of 𝑒&#x27;()=1𝑛×𝑒&#x27;(•Result: 𝛻𝜑&amp;=*!&quot;#&#x27;+$!&quot; •𝐴&amp;&#x27;(: area of triangle 123•For a function 𝑢&amp;,𝑢&#x27;,𝑢(:𝛻𝑢&amp;&#x27;(=𝐆𝑢&amp;&#x27;(=𝟏𝟐𝐀𝟏𝟐𝟑𝑢&amp;+𝑢&#x27;+𝑢(
+12
+derived from geometry
+Gradients•In matrix form (⃗𝑒&#x27;()etc. are column vectors 1x3):•𝐺&amp;&#x27;(𝑢=&amp;&#x27;+$!&quot;⃗𝑒&#x27;()⃗𝑒(&amp;)⃗𝑒&amp;&#x27;)𝑢&amp;𝑢&#x27;𝑢(=⁄/0/1=/0/2⁄/0/3&amp;&#x27;(
+•Aggregating, we can get global matrix 𝐺(4×%•Piecewise-linear (PL) vertex functions -&gt; piecewise-constant (PC) face gradients•3𝐹 - one vector (xyz) in each face
+13
+Linear Elasticity in FEM•Discretization: deformation field on vertices•Where each vertex moves•PL inside each tetrahedron\triangle•Reminder: Jacobian: 𝐽𝑢𝑝:ℝ(×(=𝛻𝑢1(𝑝)𝛻𝑢2(𝑝)𝛻𝑢3(𝑝)•Deformation field 𝑢	= three scalar functions 𝑢1, 𝑢2, 𝑢3
+14
+Linear Elasticity in FEM•Unrolling the 3x3 gradient to 9x1:•Denoting: 𝑢1=𝑢1,&amp;𝑢1,&#x27;𝑢1,(, similarly for 𝑢2 and 𝑢3
+𝛻𝑢17𝛻𝑢27𝛻𝑢37=𝐽&amp;&#x27;(𝑢1𝑢2𝑢3=𝐺&amp;&#x27;(𝐺&amp;&#x27;(𝐺&amp;&#x27;(
+𝑢1𝑢2𝑢3
+•Confidence check: 𝐽&amp;&#x27;( is a 9×9 matrix.15
+Tetrahedral Meshes•Elements 𝑒=[1234]•“straightforward” generalization•Scalar functions/deformation vectors are defined on vertices•Piecewise-linear inside each tet volume•Gradients piecewise-constant in each tet•èGradients orthogonal to opposite face normal•Single tet Jacobian: 𝐽*: 9×12 matrix•Input vertex deformation field 3×4=12•Output tet jacobian: 3×3=9 16
+1
+234
+𝜑%
+𝑢&amp;
+𝑢&#x27;
+Linear Elasticity in FEM•Full strain tensor:𝐄=12𝐽𝑢7𝐽𝑢+𝐽𝑢+𝐽𝑢7•Not linear inside tets!•Linear elasticity approximation:𝛆≈12𝐽𝑢+𝐽𝑢8•Good for small deformations without much rotation
+17
+Discrete Strain Tensor•Written explicitly:
+𝛆=12𝐽𝑢+𝐽𝑢!=12
+2𝜕𝑢&quot;𝜕𝑥𝜕𝑢&quot;𝜕𝑦+𝜕𝑢#𝜕𝑥𝜕𝑢&quot;𝜕𝑧+𝜕𝑢$𝜕𝑥𝜕𝑢#𝜕𝑥+𝜕𝑢&quot;𝜕𝑦2𝜕𝑢#𝜕𝑦𝜕𝑢#𝜕𝑧+𝜕𝑢$𝜕𝑦𝜕𝑢$𝜕𝑥+𝜕𝑢&quot;𝜕𝑧𝜕𝑢$𝜕𝑦+𝜕𝑢#𝜕𝑧2𝜕𝑢$𝜕𝑧•Only 6 relevant elements (rest are symmetric):
+𝜀&quot;&quot;𝜀##𝜀$$𝜀&quot;#𝜀#$𝜀$&quot;
+=
+𝜕𝜕𝑥𝜕𝜕𝑦𝜕𝜕𝑧0.5𝜕𝜕𝑦0.5𝜕𝜕𝑥0.5𝜕𝜕𝑧0.5𝜕𝜕𝑦0.5𝜕𝜕𝑧0.5𝜕𝜕𝑥
+𝑢&quot;(𝑝)𝑢#(𝑝)𝑢$(𝑝)
+18
+Discrete Strain Tensor•In a single tet: 𝐽!𝑢 is constantè 𝛆! is constant•We want to get 𝛆! as a direct function of 𝑢•We have:
+𝛆!=𝜀&quot;&quot;𝜀##𝜀$$𝜀&quot;#𝜀#$𝜀$&quot;
+=𝐷𝐽!𝑢&quot;𝑢#𝑢$,
+Where D is a permutation matrix that “chooses” the corresponding values of 𝐽!𝑢 •Confidence check: D is of size 6×9 and does not depend on the shape of any tet (only contains non-zeros values “1” or “0.5”)19
+Discrete Strain Tensor•Strain tensor per face:𝛆*=𝐷𝐽*𝑢*=𝐵*𝑢*•𝑢*: all 𝑢123,&amp;&#x27;(8 values (12 in total)•Note:	𝐵*	is	6x12•𝐵* contains derivatives of 𝜑&amp;,&#x27;,(,8(𝑝)•𝜑&amp;,&#x27;,(,: are linear inside 𝑒•Derivatives of 𝜑) are constant inside 𝑒•𝐵* is constant inside the element!•More important: 𝐵* only depends on the (original) geometry---doesn’t change with time!20
+1
+234
+𝜑%
+Discrete Stress Tensor•Stress and strain are related by Hooke’s law•Remember⃗𝐹=−𝑘⃗𝑥?•Again, because of symmetry, we use the compact form:
+𝝈*=𝜎11𝜎22𝜎33𝜎12𝜎23𝜎31
+21
+Discrete Stress Tensor•Stress and strain are related by discrete  stiffness tensor 𝐂3:ℝ4×4.𝜎3=𝐂3𝜀3=𝐂3𝐵3𝑢3•Relatively easy structure in the discrete case:
+𝐂3=𝜆+2𝜇𝜆𝜆𝜆𝜆+2𝜇𝜆𝜆𝜆𝜆+2𝜇2𝜇2𝜇2𝜇•Where 𝜇=67(89:),𝜆=:6(89:)(8;7:)•𝑌 – Young ’s modulus•𝜐 – Poisson’s ratio•𝜇 and 𝜆 are known as Lamé coefficients22
+Strain Energy•Potential energy gained when applying strain to object:𝑈!=12.%𝛔!,𝛆!𝑑𝑉•We have that 𝜎!=𝐂!𝐵!𝑢! and 𝛆!=𝐵!𝑢!•Then:𝛔!,𝛆!=𝛔!%𝛆!=𝑢!%𝐵!%𝐶!𝐵!𝑢!•Both are constant inside volume, so:𝑈!=12𝑉𝑜𝑙𝑒×𝑢!%𝐵!%𝐶!𝐵!𝑢!=12𝑢!%𝐾!𝑢!•𝐾!: stiffness matrix of 12×12•Only depends on the original geometry and material properties! 23
+http://www.engineeringarchives.com/img/les_mom_strainenergydensity_1.png
+Elastic Forces•Derivatives of the potential energy:𝑓*=−𝜕𝑈*𝜕𝑢*=−𝐾*𝑢*•Each element of 𝑓* corresponds to an element of 𝑢*•Inner force acting on that coordinate due to deformation•Negative: wants to release energy!
+24
+Rest StateDeformation
+𝑓
+Elastic Forces•Net force on each vertex: sum of forces from all adjacent elements•Aggregated into a big matrix:𝑓=−𝐾𝑢 •𝑢(&quot;,𝑓(&quot;,𝐾(&quot;×(&quot;•Interpretation: a “force Laplacian”•Pulling vertex toward “rest-state equilibrium”
+25Rest StateDeformation
+𝑓
+𝑓(=−𝜕𝑈(𝜕𝑢(=−𝐾(𝑢(
+Free Dynamic Deformation•Computing new positions 𝑥(𝑡):𝑀𝑥EE𝑡+𝐷𝑥E𝑡+𝐾𝑥−𝑥F=𝑓*1G•𝑀: Mass matrix •𝐷: Damping matrix•𝐾: stiffness matrix •𝑓A%#: other forces (gravity etc.)
+26
+Mass Matrix•Suppose we are given density 𝜌 for each tetrahedron•We need mass per vertex (where acceleration is)•Solution: use Voronoi area:𝑚#=**∈H#14𝜌𝑉(𝑒)•Mass matrix is then𝑀=𝑑𝑖𝑎𝑔{𝑚#,𝑚#,𝑚#}•Each element in the diagonal corresponds to which vertex is represented in the respective column of 𝑥27
+𝑀𝑥))𝑡+𝐷𝑥)𝑡+𝐾𝑥−𝑥*=𝑓(+,
+Dampening Matrix•We often use Rayleigh Dampening:𝐷=𝛼𝑀+𝛽𝐾•𝛼, 𝛽 are dampening parameters.•A whole theory of how to compute them and to what effect…•For our purposes: keep as parameters, limit by small values 0≤𝛼,𝛽≤0.2
+28
+Constraints•Assume a set of holonomic constraints 𝐶𝑥=0•With Jacobian 𝐽! of size |𝐶|×3|𝑉|•The modified constrained dynamic deformation equation:
+•Since velocity 𝑥&amp;𝑡 must be in the null space of 𝐽&#x27;è we add constraint forces spanned by its row space•By Lagrange multipliers 𝛼•Solving for constrained soft-body deformation is very advanced!
+29
+𝑀𝑥GG𝑡+𝐷𝑥G𝑡+𝐾𝑥−𝑥H+𝐽I8𝛼=𝑓A%#,𝐽I𝑥G𝑡=0
+https://youtu.be/YpXX6lPs0gM?t=28https://siggraphcontact.github.io/
+Time Integration•Best practice: a variant on implicit backward integration•Solve for:𝑥𝑡+∆𝑡=𝑥𝑡+∆𝑡d𝑣𝑡+∆𝑡•similarly for 𝑣𝑡+∆𝑡 and 𝑎𝑡+∆𝑡•Getting:
+•Converting to impulse-based equation (multiplying by ∆𝑡): 30
+𝑀𝑥))𝑡+𝐷𝑥)𝑡+𝐾𝑥−𝑥*+𝐽-.𝛼=𝑓(+,
+𝑀𝑣𝑡+∆𝑡−𝑣(𝑡)∆𝑡+𝐷𝑣𝑡+∆𝑡+𝐾𝑥𝑡+∆𝑡N𝑣𝑡+∆𝑡−𝑥0+𝐽-.𝛼=𝑓(+,
+𝑀+∆𝑡𝐷+∆𝑡&amp;𝐾𝑣𝑡+∆𝑡+𝐽-.𝛽=𝑀𝑣𝑡−∆𝑡[𝐾𝑥𝑡−𝑥*−𝑓(+,]Constant matrix in time!Variables
+Constraint jacobian, changes in timeRight-hand side, changes with time
+Time Integration
+31
+𝑀+∆𝑡𝐷+∆𝑡&amp;𝐾𝑣𝑡+∆𝑡+𝐽-.𝛽=𝑀𝑣𝑡−∆𝑡[𝐾𝑥𝑡−𝑥*−𝑓(+,]•All quantities are momenti/impulses•Note different Lagrange multipliers 𝛽•Paralleling our rigid-body formulation!𝑀𝑣𝑡+∆𝑡+𝐽I7𝛽=𝑀𝑣𝑡+∆𝑡𝑓*1G•With mass matrix containing inertia-tensor terms•Solution had the familiar form:
+•However, 𝑀+∆𝑡𝐷+∆𝑡&#x27;𝐾	is less obvious to invert𝐽I𝑀J&amp;𝐽I7𝛽=−𝐽I𝑣𝑡+𝑀J&amp;∆𝑡𝑓*1G
+Solving the system•We need to solve the linear system in every time step•Abstract form: 𝐴𝑣𝑡+∆𝑡+𝐽I7𝛽=𝑏,	𝐽I𝑣𝑡+∆𝑡=0•or in matrix form:
+•Called the KKT matrix•Symmetric; solveable by LU Decomposition32
+𝐴𝐽!&quot;𝐽!0𝑣𝑡+∆𝑡𝛽=𝑏0
+“Index Hell”•Figuring out the matrices can be quite a job•“which vertex, which coordinate xyz to which element multiplies with what” è index hell•Easy to get wrong!•Life-(and effort-; and grade-) saving tip:•Create Complicated matrices (such as K) through the composition of easier matrices•Example: compute a huge 𝐾’ that is just made of blocks of the much easier 𝐾* per-element•Compose with a matrix 𝑄 that averages numbers from elements to adjacent vertices to get 𝐾=𝑄𝐾’𝑄7•Similar with the matrices 𝐺,𝐽, etc.33
+Corotational Elements•Insight: rotating an element should not change the strain energy•Conclusion: Given an element in position 𝑥, with strain energy 𝑈*,  and consequent elastic forces 𝑓*, the forces on a rotated element 𝑅*𝑥 should be 𝑅*𝑓*!
+34
+𝑓( 𝑅(𝑓(
+Müller and Gross, “Interactive Virtual Materials”
+Corotational Elements•Method:•Estimate rotation 𝑅A, and factor out rotation from the deformed object 𝑥: 𝑅AT&amp;x•Compute elastic forces of unrotated object:  𝐾A𝑅AT&amp;x−𝑥H•Rotate back to deformed state to get actual forces:𝑓A=𝑅A𝐾A𝑅AT&amp;x−𝑥H=𝐾A′𝑢A
+35
+Corotational Elements•Advantages: able to work with large rotations•Disadvantages: stiffness matrix not constant anymore•How to estimate rotation 𝑅*?
+36
+Finding Best-Fit Rotation•Original positions x, deformed positions x’•Create stacked coordinates of edges of original points:𝑃=𝑥&amp;−𝑥&#x27;𝑥&amp;−𝑥!, 𝑄=𝑥&amp;′−𝑥&#x27;′𝑥&amp;′−𝑥!′•Compute matrix: 𝑆=𝑃7𝑄∈ℝ(×(•Singular value decomposition (SVD) extracts rotation from 𝑆
+37
+Singular Value Decomposition•Every linear operator (=matrix 𝑀#×%) can be decomposed to:•Rotation (Change of basis): 𝑉K×K•Stretch in the new basis: ΣL×K •Note (possible) change in dimension•Rotation (another change of basis): 𝑈L×L
+•For vector 𝑝 we get 𝑀𝑝=𝑈Σ𝑉&quot;𝑝
+38
+Examples
+39
+https://www.youtube.com/watch?v=4Wl0ksysYKMhttps://www.youtube.com/watch?v=6f3UYHnR4zUhttps://www.youtube.com/watch?v=p5uhnSw8_Xw</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
