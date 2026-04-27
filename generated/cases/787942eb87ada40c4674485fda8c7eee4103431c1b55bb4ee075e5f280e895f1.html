@@ -1,0 +1,563 @@
+<!-- PDF_DETAIL_TEMPLATE_VERSION:1 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>lab4.pdf | PDF 详情</title>
+<meta name="description" content="Lab 4: Statistical Tests and Regression 27 February 2025 # Load required package for reading Stata files # Note: The .dta file is a newer version, so we use the haven package library(haven) # Load the data ajr &lt;-read_dta(&quot;ajr.dta&quot;) # Display basic information about the dataset dim(ajr) [1] 163 17 names(ajr) [1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot; [7] &quot;logem4&quot;…"/>
+<meta name="keywords" content="案例详情, 留学生CS辅导, CS作业辅导, 作业代写, 项目支持, Assignment Help, CS Tutoring, Project Assistance"/>
+<link rel="canonical" href="https://cs.liuzg50505.asia/generated/cases/787942eb87ada40c4674485fda8c7eee4103431c1b55bb4ee075e5f280e895f1.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="zh_CN"/>
+<meta property="og:title" content="lab4.pdf | PDF 详情"/>
+<meta property="og:description" content="Lab 4: Statistical Tests and Regression 27 February 2025 # Load required package for reading Stata files # Note: The .dta file is a newer version, so we use the haven package library(haven) # Load the data ajr &lt;-read_dta(&quot;ajr.dta&quot;) # Display basic information about the dataset dim(ajr) [1] 163 17 names(ajr) [1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot; [7] &quot;logem4&quot;…"/>
+<meta property="og:url" content="https://cs.liuzg50505.asia/generated/cases/787942eb87ada40c4674485fda8c7eee4103431c1b55bb4ee075e5f280e895f1.html"/>
+<meta property="og:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="lab4.pdf | PDF 详情"/>
+<meta name="twitter:description" content="Lab 4: Statistical Tests and Regression 27 February 2025 # Load required package for reading Stata files # Note: The .dta file is a newer version, so we use the haven package library(haven) # Load the data ajr &lt;-read_dta(&quot;ajr.dta&quot;) # Display basic information about the dataset dim(ajr) [1] 163 17 names(ajr) [1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot; [7] &quot;logem4&quot;…"/>
+<meta name="twitter:image" content="https://cs.liuzg50505.asia/assets/hero.png"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://cs.liuzg50505.asia/#organization",
+      "name": "留学生CS辅导",
+      "alternateName": "International CS Tutoring",
+      "url": "https://cs.liuzg50505.asia/",
+      "logo": "https://cs.liuzg50505.asia/assets/hero.png"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://cs.liuzg50505.asia/#website",
+      "url": "https://cs.liuzg50505.asia/",
+      "name": "留学生CS辅导",
+      "alternateName": "CS Tutoring for International Students",
+      "publisher": {
+        "@id": "https://cs.liuzg50505.asia/#organization"
+      },
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://cs.liuzg50505.asia/generated/cases/787942eb87ada40c4674485fda8c7eee4103431c1b55bb4ee075e5f280e895f1.html#webpage",
+      "url": "https://cs.liuzg50505.asia/generated/cases/787942eb87ada40c4674485fda8c7eee4103431c1b55bb4ee075e5f280e895f1.html",
+      "name": "lab4.pdf | PDF 详情",
+      "description": "Lab 4: Statistical Tests and Regression 27 February 2025 # Load required package for reading Stata files # Note: The .dta file is a newer version, so we use the haven package library(haven) # Load the data ajr &lt;-read_dta(&quot;ajr.dta&quot;) # Display basic information about the dataset dim(ajr) [1] 163 17 names(ajr) [1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot; [7] &quot;logem4&quot;…",
+      "isPartOf": {
+        "@id": "https://cs.liuzg50505.asia/#website"
+      },
+      "inLanguage": "zh-CN"
+    }
+  ]
+}
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;family=Noto+Sans+SC:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-tertiary": "#ffffff",
+                "inverse-surface": "#2d3133",
+                "inverse-primary": "#adc7ff",
+                "secondary-fixed-dim": "#76d6d5",
+                "surface-container-highest": "#e0e3e5",
+                "surface-container-high": "#e6e8ea",
+                "secondary-fixed": "#93f2f2",
+                "tertiary": "#6d23f8",
+                "secondary-container": "#90efef",
+                "tertiary-fixed": "#e8ddff",
+                "on-surface": "#191c1e",
+                "on-primary-fixed-variant": "#004493",
+                "tertiary-container": "#8553ff",
+                "surface-bright": "#f7f9fb",
+                "surface-container-lowest": "#ffffff",
+                "surface-variant": "#e0e3e5",
+                "primary": "#005bbf",
+                "primary-fixed-dim": "#adc7ff",
+                "on-error-container": "#93000a",
+                "on-primary": "#ffffff",
+                "primary-container": "#1a73e8",
+                "surface-dim": "#d8dadc",
+                "on-secondary-fixed-variant": "#004f4f",
+                "surface-tint": "#005bc0",
+                "outline": "#727785",
+                "on-secondary-container": "#006e6e",
+                "background": "#f7f9fb",
+                "on-error": "#ffffff",
+                "secondary": "#006a6a",
+                "error": "#ba1a1a",
+                "primary-fixed": "#d8e2ff",
+                "on-primary-container": "#ffffff",
+                "on-secondary-fixed": "#002020",
+                "outline-variant": "#c1c6d6",
+                "on-background": "#191c1e",
+                "surface": "#f7f9fb",
+                "on-tertiary-fixed-variant": "#5300cd",
+                "error-container": "#ffdad6",
+                "tertiary-fixed-dim": "#cfbdff",
+                "on-tertiary-fixed": "#22005d",
+                "inverse-on-surface": "#eff1f3",
+                "on-secondary": "#ffffff",
+                "surface-container-low": "#f2f4f6",
+                "on-tertiary-container": "#070021",
+                "on-primary-fixed": "#001a41",
+                "surface-container": "#eceef0",
+                "on-surface-variant": "#414754"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "fontFamily": {
+                "headline": ["Plus Jakarta Sans", "Noto Sans SC"],
+                "body": ["Inter"],
+                "label": ["Space Grotesk"]
+            }
+          },
+        },
+      }
+</script>
+<style>
+        html {
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 20px 40px rgba(0, 91, 191, 0.06);
+        }
+</style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center h-20 px-8 max-w-7xl mx-auto text-sm tracking-tight">
+<div class="text-2xl font-bold bg-gradient-to-r from-blue-700 to-blue-500 bg-clip-text text-transparent">
+                留学生CS辅导
+</div>
+<div class="hidden md:flex items-center gap-x-8">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../index.html">首页</a>
+<a class="text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-600 pb-1" href="../../cases.html">案例</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="../../about.html">关于我们</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="inline-flex px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-white rounded-xl font-bold shadow-lg shadow-primary/20 hover:scale-95 transition-all" href="../../index.html#contact">立即咨询</a>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<section class="py-24 md:py-32 bg-surface-container-low">
+<div class="container mx-auto px-8 max-w-7xl">
+<!-- CASE_DETAIL_CONTENT_START -->
+<div class="max-w-4xl mb-12">
+  <p class="font-label text-sm uppercase tracking-[0.2em] text-primary font-bold mb-4">PDF Detail</p>
+  <h1 class="text-4xl md:text-6xl font-black font-headline leading-tight mb-6 break-all">lab4.pdf</h1>
+  <p class="text-lg md:text-xl text-on-surface-variant leading-relaxed">
+    下方展示该 PDF 的摘要和完整提取文本。
+  </p>
+</div>
+<div class="grid grid-cols-1 gap-8">
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-5">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">摘要预览</p>
+        <p class="text-base md:text-lg leading-8 text-slate-700 whitespace-pre-wrap break-words">Lab 4: Statistical Tests and Regression 27 February 2025 # Load required package for reading Stata files # Note: The .dta file is a newer version, so we use the haven package library(haven) # Load the data ajr &lt;-read_dta(&quot;ajr.dta&quot;) # Display basic information about the dataset dim(ajr) [1] 163 17 names(ajr) [1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot; [7] &quot;logem4&quot; &quot;asia&quot; &quot;yellow&quot; &quot;baseco&quot; &quot;leb95&quot; &quot;imr95&quot; [13] &quot;meantemp&quot; &quot;lt100km&quot; &quot;latabs&quot; &quot;loghjypl&quot; &quot;other&quot; summary(ajr) shortnam africa lat_abst malfal94 Length:163 Min. :0.0000 Min. :0.0000 Min. :0.0000 Class :character 1st Qu.:0.0000 1st Qu.:0.1444 1st Qu.:0.0000 Mode :character Median :0.0000 Median :0.2667 Median :0.0005 Mean :0.3067 Mean :0.2956 Mean :0.2945 3rd Qu.:1.0000 3rd Qu.:0.4469 3rd Qu.:0.7315 Max. :1.0000 Max. :0.7222 Max. :1.0000 NA’s :1 NA’s :6 avexpr logpgp95 logem4 asia Min. : 1.636 Min. : 6.109 Min. :0.9361 Min. :0.0000 1st Qu.: 5.886 1st Qu.: 7.376 1st Qu.:4.2246 1st Qu.:0.0000 Median : 7.045 Median : 8.266 Median :4.4427 Median :0.0000 Mean : 7.066 Mean : 8.303 Mean :4.5960 Mean :0.2577 3rd Qu.: 8.273 3rd Qu.: 9.216 3rd Qu.:5.6101 3rd Qu.:1.0000 Max. :10.000 Max. :10.289 Max. :7.9862 Max. :1.0000 NA’s :42 NA’s :15 NA’s :76 yellow baseco leb95 imr95 meantemp Min. :0.0000 Min. :1 Min. :37.24 Min. : 4.90 Min. :-0.20 1st Qu.:0.0000 1st Qu.:1 1st Qu.:52.25 1st Qu.: 27.98 1st Qu.:21.56 Median :0.0000 Median :1 Median :65.70 Median : 49.45 Median :24.47 Mean :0.4724 Mean :1 Mean :62.08 Mean : 57.07 Mean :23.13 3rd Qu.:1.0000 3rd Qu.:1 3rd Qu.:72.05 3rd Qu.: 81.75 3rd Qu.:26.39 1 Max. :1.0000 Max. :1 Max. :78.98 Max. :170.00 Max. :29.30 NA’s :99 NA’s :103 NA’s :103 NA’s :103 lt100km latabs loghjypl other Min. :0.0000 Min. :0.00000 Min. :-3.5405 Min. :0.00000 1st Qu.:0.0942 1st Qu.:0.08889 1st Qu.:-2.7411 1st Qu.:0.00000 Median :0.2392 Median :0.15000 Median :-1.5606 Median :0.00000 Mean :0.3739 Mean :0.17823…</p>
+      </div>
+      <div class="flex flex-wrap gap-3">
+        <a class="inline-flex items-center justify-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-white transition hover:opacity-90" href="../../cases.html">返回案例列表</a>
+      </div>
+    </div>
+  </article>
+  <article class="bg-surface-container-lowest rounded-2xl overflow-hidden editorial-shadow border border-slate-100">
+    <div class="p-6 md:p-8 flex flex-col gap-4">
+      <div class="flex flex-col gap-2">
+        <p class="font-label text-xs uppercase tracking-[0.18em] text-primary font-bold">全文内容</p>
+        <h2 class="text-xl md:text-2xl font-bold text-slate-900 break-all">lab4.pdf</h2>
+      </div>
+      <pre class="text-sm md:text-[15px] leading-7 text-slate-700 whitespace-pre-wrap break-words bg-slate-50 border border-slate-200 rounded-xl p-4">Lab 4: Statistical Tests and Regression
+27 February 2025
+# Load required package for reading Stata files
+# Note: The .dta file is a newer version, so we use the haven package
+library(haven)
+# Load the data
+ajr &lt;-read_dta(&quot;ajr.dta&quot;)
+# Display basic information about the dataset
+dim(ajr)
+[1] 163 17
+names(ajr)
+[1] &quot;shortnam&quot; &quot;africa&quot; &quot;lat_abst&quot; &quot;malfal94&quot; &quot;avexpr&quot; &quot;logpgp95&quot;
+[7] &quot;logem4&quot; &quot;asia&quot; &quot;yellow&quot; &quot;baseco&quot; &quot;leb95&quot; &quot;imr95&quot;
+[13] &quot;meantemp&quot; &quot;lt100km&quot; &quot;latabs&quot; &quot;loghjypl&quot; &quot;other&quot;
+summary(ajr)
+shortnam africa lat_abst malfal94
+Length:163 Min. :0.0000 Min. :0.0000 Min. :0.0000
+Class :character 1st Qu.:0.0000 1st Qu.:0.1444 1st Qu.:0.0000
+Mode :character Median :0.0000 Median :0.2667 Median :0.0005
+Mean :0.3067 Mean :0.2956 Mean :0.2945
+3rd Qu.:1.0000 3rd Qu.:0.4469 3rd Qu.:0.7315
+Max. :1.0000 Max. :0.7222 Max. :1.0000
+NA’s :1 NA’s :6
+avexpr logpgp95 logem4 asia
+Min. : 1.636 Min. : 6.109 Min. :0.9361 Min. :0.0000
+1st Qu.: 5.886 1st Qu.: 7.376 1st Qu.:4.2246 1st Qu.:0.0000
+Median : 7.045 Median : 8.266 Median :4.4427 Median :0.0000
+Mean : 7.066 Mean : 8.303 Mean :4.5960 Mean :0.2577
+3rd Qu.: 8.273 3rd Qu.: 9.216 3rd Qu.:5.6101 3rd Qu.:1.0000
+Max. :10.000 Max. :10.289 Max. :7.9862 Max. :1.0000
+NA’s :42 NA’s :15 NA’s :76
+yellow baseco leb95 imr95 meantemp
+Min. :0.0000 Min. :1 Min. :37.24 Min. : 4.90 Min. :-0.20
+1st Qu.:0.0000 1st Qu.:1 1st Qu.:52.25 1st Qu.: 27.98 1st Qu.:21.56
+Median :0.0000 Median :1 Median :65.70 Median : 49.45 Median :24.47
+Mean :0.4724 Mean :1 Mean :62.08 Mean : 57.07 Mean :23.13
+3rd Qu.:1.0000 3rd Qu.:1 3rd Qu.:72.05 3rd Qu.: 81.75 3rd Qu.:26.39
+1
+
+Max. :1.0000 Max. :1 Max. :78.98 Max. :170.00 Max. :29.30
+NA’s :99 NA’s :103 NA’s :103 NA’s :103
+lt100km latabs loghjypl other
+Min. :0.0000 Min. :0.00000 Min. :-3.5405 Min. :0.00000
+1st Qu.:0.0942 1st Qu.:0.08889 1st Qu.:-2.7411 1st Qu.:0.00000
+Median :0.2392 Median :0.15000 Median :-1.5606 Median :0.00000
+Mean :0.3739 Mean :0.17823 Mean :-1.7311 Mean :0.02454
+3rd Qu.:0.6327 3rd Qu.:0.25556 3rd Qu.:-0.8313 3rd Qu.:0.00000
+Max. :1.0000 Max. :0.66667 Max. : 0.0000 Max. :1.00000
+NA’s :102 NA’s :102 NA’s :40
+For this exercise, we will continue analyze data from Acemoglu, Daron, Simon Johnson, and James A.
+Robinson. 2001. “The Colonial Origins of Comparative Development: An Empirical Investigation.”Amer-
+ican Economic Review91(5): 1369-1401. The paper attempts to answer the question how do political
+institutions promote economic development. Specifically, the authors focus on the relationship between
+strength of property rights in a country and GDP.
+Download the data (ajr.dta) from Canvas or webpage (https://baole.io/teaching/pia3607/data/ajr.dta.
+The dataset contains the following variables about individual judges:
+The following is the description of the data:
+Name Description
+shortnamthree-letter country code
+africaindicator for if the country is in Africa
+asiaindicator for if the country is in Asia
+otherindicator for if the country is in continents other
+Africa &amp; Asia
+avexprstrength of property rights (protection against
+expropriation)
+logpgp95log GDPper capita
+loghjypllog GDPper work
+imr95infant mortality rate
+lat_abstlatitude of capital city
+basecobase sample in Colonial Origins paper
+Question 1
+It is usually a good idea to start with the simplest model to examine the relationship between explanatory
+and outcome variables. First, regress the log GDPper capita(logpgp95) on strength of property rights
+(avexpr). Usesummary()to show the output of regression. Interpret the results.
+# Model 1: Simple regression
+model1 &lt;-lm(logpgp95~avexpr, data = ajr)
+summary(model1)
+Call:
+lm(formula = logpgp95 ~ avexpr, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+2
+
+-1.9020 -0.3160 0.1380 0.4225 1.4406
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 4.62609 0.30058 15.39 &lt;2e-16 ***
+avexpr 0.53187 0.04062 13.09 &lt;2e-16 ***
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.7179 on 109 degrees of freedom
+(52 observations deleted due to missingness)
+Multiple R-squared: 0.6113, Adjusted R-squared: 0.6078
+F-statistic: 171.4 on 1 and 109 DF, p-value: &lt; 2.2e-16
+The result foravexprhas a positive coefficient and is statistically significantly (p &lt; 0.001) showing that
+higher levels of property rights correlate with higher GDP per capita. Specifically, an increase of one unit
+in the protection of property rights results in the estimated coefficient being equal to the increase in the log
+of GDP per capita.
+Question 2
+Using regression, we often want to control for other confounding factors and see if the relationship between
+our explanatory variable of interest and outcome still holds. For example, previous studies show climate can
+also affect the wealth of a country. So, next, in the second model, let’s add the latitude of the capital cities
+(lat_abst) as a control variable. What do you find? Additionally, countries from different regions may also
+have different dynamics in terms of the relationship between property rights and development. In the third
+model, add the dummy variables of Africa, Asia, and other continent as control variables.
+# Model 2: Adding latitude as a control variable
+model2 &lt;-lm(logpgp95~avexpr+lat_abst, data = ajr)
+summary(model2)
+Call:
+lm(formula = logpgp95 ~ avexpr + lat_abst, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+-1.7531 -0.3475 0.1207 0.4432 1.3814
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 4.8729 0.3280 14.855 &lt; 2e-16 ***
+avexpr 0.4635 0.0555 8.352 2.49e-13 ***
+lat_abst 0.8722 0.4877 1.788 0.0765 .
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.7108 on 108 degrees of freedom
+(52 observations deleted due to missingness)
+Multiple R-squared: 0.6225, Adjusted R-squared: 0.6155
+F-statistic: 89.05 on 2 and 108 DF, p-value: &lt; 2.2e-16
+3
+
+# Model 3: Adding region dummies as control variables
+model3 &lt;-lm(logpgp95~avexpr+lat_abst+africa+asia+other, data = ajr)
+summary(model3)
+Call:
+lm(formula = logpgp95 ~ avexpr + lat_abst + africa + asia + other,
+data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+-1.66865 -0.28680 0.06585 0.34075 1.25274
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 5.85108 0.33959 17.230 &lt; 2e-16 ***
+avexpr 0.38956 0.05065 7.691 8.26e-12 ***
+lat_abst 0.33256 0.44549 0.747 0.457
+africa -0.91639 0.16627 -5.511 2.56e-07 ***
+asia -0.15306 0.15478 -0.989 0.325
+other 0.30355 0.37476 0.810 0.420
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.6261 on 105 degrees of freedom
+(52 observations deleted due to missingness)
+Multiple R-squared: 0.7152, Adjusted R-squared: 0.7016
+F-statistic: 52.74 on 5 and 105 DF, p-value: &lt; 2.2e-16
+Controlling for latitude, the positive and significant coefficient foravexprindicates that the association
+between property rights and GDP is still present. The inclusion of geographic dummy variables in addition
+to latitude will still give a significant value foravexprthough it may undergo a change in its value due to
+different regions being used. This shows that the association between property rights and GDP is strong
+despite other distance analyses.
+Question 3
+Sometimes we need to do some data manipulation and wrangling before the analysis. Next, let’s practice
+this by converting the region variables into one single categorical variables. Create a newregionvariable
+that indicates the region of a country. Note that, if all three variables equal 0, it means the country is in
+Americas. So, the newregionvariable should have four levels (“Africa”, “Asia”, “Americas”, “Other”).
+And you can set “Americas” as the baseline. Use this variable instead of the originalafrica,asia,other
+variables and fit Model 3 from Question 2 again. What do you find?
+# Create a region factor variable
+ajr$region &lt;- NA
+ajr$region[ajr$africa==1] &lt;- &quot;Africa&quot;
+ajr$region[ajr$asia==1] &lt;- &quot;Asia&quot;
+ajr$region[ajr$other==1] &lt;- &quot;Other&quot;
+ajr$region[is.na(ajr$region)] &lt;- &quot;Americas&quot;
+# Set Americas as the baseline
+4
+
+ajr$region &lt;-factor(ajr$region, levels =c(&quot;Americas&quot;, &quot;Africa&quot;, &quot;Asia&quot;, &quot;Other&quot;))
+# Check the distribution
+table(ajr$region)
+Americas Africa Asia Other
+67 50 42 4
+# Refit Model 3 using the region factor
+model3_factor &lt;-lm(logpgp95~avexpr+lat_abst+region, data = ajr)
+summary(model3_factor)
+Call:
+lm(formula = logpgp95 ~ avexpr + lat_abst + region, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+-1.66865 -0.28680 0.06585 0.34075 1.25274
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 5.85108 0.33959 17.230 &lt; 2e-16 ***
+avexpr 0.38956 0.05065 7.691 8.26e-12 ***
+lat_abst 0.33256 0.44549 0.747 0.457
+regionAfrica -0.91639 0.16627 -5.511 2.56e-07 ***
+regionAsia -0.15306 0.15478 -0.989 0.325
+regionOther 0.30355 0.37476 0.810 0.420
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.6261 on 105 degrees of freedom
+(52 observations deleted due to missingness)
+Multiple R-squared: 0.7152, Adjusted R-squared: 0.7016
+F-statistic: 52.74 on 5 and 105 DF, p-value: &lt; 2.2e-16
+When the regions are defined using factors the results will be the same as when they are defined using
+separate dummy variables. The baseline region will be the Americas. The coefficient differences between
+Africa, Asia and Other will represent the differences in GDP per capita from the Americas holding all other
+variables constant. The coefficients foravexprwill be comparable to Model 3.
+Question 4
+Different samples can also change the results. So, for a study, we may want to use slightly different samples
+and fit the regressions to see if the relationship is sensitive to different sub samples. Original authors of the
+paper also did this. They run the models for a base sample that were ex-colonies. This is represented by an
+indicator in the data,baseco= 1 means a country belongs to the base sample and 0 otherwise. Next, limit
+the data to only base sample and fit the three models again. What can you conclude?
+5
+
+# Subset to base sample (ex-colonies)
+ajr_base &lt;- ajr[ajr$baseco==1, ]
+# Check sample size
+nrow(ajr_base)
+[1] 163
+# Refit Model 1 with base sample
+model1_base &lt;-lm(logpgp95~avexpr, data = ajr_base)
+summary(model1_base)
+Call:
+lm(formula = logpgp95 ~ avexpr, data = ajr_base)
+Residuals:
+Min 1Q Median 3Q Max
+-1.8715 -0.4644 0.1683 0.4610 1.1413
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 4.66038 0.40851 11.408 &lt; 2e-16 ***
+avexpr 0.52211 0.06119 8.533 4.72e-12 ***
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.7132 on 62 degrees of freedom
+(99 observations deleted due to missingness)
+Multiple R-squared: 0.5401, Adjusted R-squared: 0.5327
+F-statistic: 72.82 on 1 and 62 DF, p-value: 4.724e-12
+# Refit Model 2 with base sample
+model2_base &lt;-lm(logpgp95~avexpr+lat_abst, data = ajr_base)
+summary(model2_base)
+Call:
+lm(formula = logpgp95 ~ avexpr + lat_abst, data = ajr_base)
+Residuals:
+Min 1Q Median 3Q Max
+-1.6845 -0.4233 0.1408 0.4584 1.1858
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 4.72808 0.39732 11.900 &lt; 2e-16 ***
+avexpr 0.46789 0.06416 7.292 7.29e-10 ***
+lat_abst 1.57688 0.71031 2.220 0.0301 *
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+6
+
+Residual standard error: 0.6917 on 61 degrees of freedom
+(99 observations deleted due to missingness)
+Multiple R-squared: 0.5745, Adjusted R-squared: 0.5605
+F-statistic: 41.18 on 2 and 61 DF, p-value: 4.805e-12
+# Refit Model 3 with base sample
+model3_base &lt;-lm(logpgp95~avexpr+lat_abst+region, data = ajr_base)
+summary(model3_base)
+Call:
+lm(formula = logpgp95 ~ avexpr + lat_abst + region, data = ajr_base)
+Residuals:
+Min 1Q Median 3Q Max
+-1.34817 -0.28815 -0.00018 0.31896 1.40937
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) 5.73673 0.39820 14.407 &lt; 2e-16 ***
+avexpr 0.40128 0.05912 6.788 6.65e-09 ***
+lat_abst 0.87530 0.62827 1.393 0.1689
+regionAfrica -0.88068 0.16998 -5.181 2.91e-06 ***
+regionAsia -0.57675 0.23138 -2.493 0.0156 *
+regionOther 0.10721 0.38236 0.280 0.7802
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.5816 on 58 degrees of freedom
+(99 observations deleted due to missingness)
+Multiple R-squared: 0.7139, Adjusted R-squared: 0.6892
+F-statistic: 28.95 on 5 and 58 DF, p-value: 1.335e-14
+The analysis determines that in the restricted sample of ex-colonial countries will produce positive and
+statistically significant coefficients between property rights and GDP per capita. The magnitude of the
+coefficientsmaybedifferentthanwhenthefullsampleofex-colonialcountrieswereused. However, theoverall
+conclusion will remain that stronger property rights exist in countries with higher economic development
+and therefore will produce consistent results among many different groupings of countries.
+Question 5
+As we know, we can use different measurements to measure the same concept. Some people suspect that
+GDPper capitais not a good measure of the level of development. Instead, productivity/GDP per hour
+worked is more meaningful to indicate which stage of development a country is at. Next, change the outcome
+variable to log GDP per work (loghjypl) and fit the models again.
+# Model 1 with loghjypl as outcome
+model1_prod &lt;-lm(loghjypl~avexpr, data = ajr)
+summary(model1_prod)
+Call:
+7
+
+lm(formula = loghjypl ~ avexpr, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+-1.9002 -0.4886 0.1491 0.4446 1.4772
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) -4.82763 0.28566 -16.90 &lt;2e-16 ***
+avexpr 0.44620 0.03888 11.48 &lt;2e-16 ***
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.7134 on 106 degrees of freedom
+(55 observations deleted due to missingness)
+Multiple R-squared: 0.5541, Adjusted R-squared: 0.5499
+F-statistic: 131.7 on 1 and 106 DF, p-value: &lt; 2.2e-16
+# Model 2 with loghjypl as outcome
+model2_prod &lt;-lm(loghjypl~avexpr+lat_abst, data = ajr)
+summary(model2_prod)
+Call:
+lm(formula = loghjypl ~ avexpr + lat_abst, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+-1.57691 -0.42364 0.05617 0.48111 1.44751
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) -4.45342 0.29909 -14.890 &lt; 2e-16 ***
+avexpr 0.33504 0.05091 6.581 1.93e-09 ***
+lat_abst 1.50481 0.46150 3.261 0.0015 **
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.686 on 104 degrees of freedom
+(56 observations deleted due to missingness)
+Multiple R-squared: 0.5931, Adjusted R-squared: 0.5853
+F-statistic: 75.81 on 2 and 104 DF, p-value: &lt; 2.2e-16
+# Model 3 with loghjypl as outcome
+model3_prod &lt;-lm(loghjypl~avexpr+lat_abst+region, data = ajr)
+summary(model3_prod)
+Call:
+lm(formula = loghjypl ~ avexpr + lat_abst + region, data = ajr)
+Residuals:
+Min 1Q Median 3Q Max
+8
+
+-1.6594 -0.2665 0.0732 0.2830 1.3498
+Coefficients:
+Estimate Std. Error t value Pr(&gt;|t|)
+(Intercept) -3.30218 0.29239 -11.294 &lt; 2e-16 ***
+avexpr 0.24870 0.04334 5.739 1.00e-07 ***
+lat_abst 0.88005 0.39422 2.232 0.0278 *
+regionAfrica -1.05270 0.14911 -7.060 2.16e-10 ***
+regionAsia -0.22965 0.14793 -1.552 0.1237
+regionOther 0.36236 0.33534 1.081 0.2825
+---
+Signif. codes: 0 ’***’ 0.001 ’**’ 0.01 ’*’ 0.05 ’.’ 0.1 ’ ’ 1
+Residual standard error: 0.5598 on 101 degrees of freedom
+(56 observations deleted due to missingness)
+Multiple R-squared: 0.7369, Adjusted R-squared: 0.7239
+F-statistic: 56.57 on 5 and 101 DF, p-value: &lt; 2.2e-16
+The use of log GDP per worker as the dependent variable instead of log GDP per capita shows a continuing
+positive and significant relationship between property rights and economic development. This indicates the
+robustness of the finding to alternative metrics of economic development based on either per capita GDP or
+productivity per hour worked.
+9</pre>
+    </div>
+  </article>
+</div>
+<!-- CASE_DETAIL_CONTENT_END -->
+</div>
+</section>
+</main>
+<footer class="w-full py-16 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 max-w-7xl mx-auto gap-8">
+<div class="flex flex-col gap-4">
+<div class="text-xl font-black text-slate-900 dark:text-white">留学生CS辅导</div>
+<p class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500">
+                    © 2024 留学生CS辅导. All Rights Reserved. 沪ICP备20230000号
+</p>
+</div>
+<div class="flex gap-8">
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../index.html">首页</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../cases.html">案例</a>
+<a class="font-plus-jakarta text-xs uppercase tracking-widest text-slate-500 hover:text-slate-900 dark:hover:text-white transition-all underline decoration-blue-500 underline-offset-4" href="../../about.html">关于我们</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
